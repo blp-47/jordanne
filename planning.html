@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Planning">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj48cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI2IiBmaWxsPSIjMkQ1QTFCIi8+PHJlY3QgeD0iMTQiIHk9IjI2IiB3aWR0aD0iOTIiIGhlaWdodD0iNzgiIHJ4PSIxMCIgZmlsbD0iI0ZERkFGNiIvPjxyZWN0IHg9IjE0IiB5PSIyNiIgd2lkdGg9IjkyIiBoZWlnaHQ9IjI0IiByeD0iMTAiIGZpbGw9IiM0QThDMzIiLz48cmVjdCB4PSIxNCIgeT0iNDIiIHdpZHRoPSI5MiIgaGVpZ2h0PSI4IiBmaWxsPSIjNEE4QzMyIi8+PGNpcmNsZSBjeD0iMzciIGN5PSIyMiIgcj0iNSIgZmlsbD0iI0ZERkFGNiIvPjxjaXJjbGUgY3g9IjgzIiBjeT0iMjIiIHI9IjUiIGZpbGw9IiNGREZBRjYiLz48dGV4dCB4PSI2MCIgeT0iMzgiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSI3MDAiIGxldHRlci1zcGFjaW5nPSIyIj5QTEFORE5JTkc8L3RleHQ+PHJlY3QgeD0iMjIiIHk9IjU4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjRTRGMkVDIiBzdHJva2U9IiMyQTZFNUEiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHJlY3QgeD0iNDIiIHk9IjU4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjRTBFQUY4IiBzdHJva2U9IiMxQTREOEMiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHJlY3QgeD0iNjIiIHk9IjU4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjRjhFOEUwIiBzdHJva2U9IiM4QzNBMUEiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHJlY3QgeD0iODIiIHk9IjU4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjRjBFNEY4IiBzdHJva2U9IiM2QjJEOEMiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHJlY3QgeD0iMjIiIHk9Ijc4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjRURFQUU2IiBzdHJva2U9IiM1QTU1NTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHJlY3QgeD0iNDIiIHk9Ijc4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjRTRGMkVDIiBzdHJva2U9IiMyQTZFNUEiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHJlY3QgeD0iNjIiIHk9Ijc4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjRURFQUU2IiBzdHJva2U9IiM1QTU1NTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+PHJlY3QgeD0iODIiIHk9Ijc4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTQiIHJ4PSIzIiBmaWxsPSIjRTBFQUY4IiBzdHJva2U9IiMxQTREOEMiIHN0cm9rZS13aWR0aD0iMS41Ii8+PC9zdmc+">
+<title>Planning Travail</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #F5F2ED;
+    --surface: #FDFAF6;
+    --surface2: #EDE9E2;
+    --border: #D8D2C8;
+    --text: #1A1714;
+    --text2: #7A7570;
+    --text3: #B0AA9F;
+    --accent: #2D5A1B;
+    --today: #4A8C32;
+
+    --NT: #2A6E5A;
+    --NT-bg: #E4F2EC;
+    --NV: #1A4D8C;
+    --NV-bg: #E0EAF8;
+    --ST: #8C3A1A;
+    --ST-bg: #F8E8E0;
+    --VS: #6B2D8C;
+    --VS-bg: #F0E4F8;
+    --REPOS: #5A5550;
+    --REPOS-bg: #EDEAE6;
+
+    --radius: 14px;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100svh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: calc(var(--safe-top) + 16px) 20px 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .nav-btn {
+    width: 36px; height: 36px;
+    border: none; background: var(--surface2);
+    border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: var(--accent);
+    transition: transform 0.1s, background 0.15s;
+    flex-shrink: 0;
+  }
+
+  .nav-btn:active { transform: scale(0.9); background: var(--border); }
+
+  .month-title {
+    text-align: center;
+    flex: 1;
+  }
+
+  .month-name {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color: var(--text);
+    text-transform: capitalize;
+  }
+
+  .year-label {
+    font-size: 12px;
+    color: var(--text2);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-top: 1px;
+  }
+
+  /* WEEKDAY HEADER */
+  .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 12px 12px 0;
+    gap: 4px;
+  }
+
+  .weekday {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text3);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 0;
+  }
+
+  .weekday.weekend { color: var(--ST); opacity: 0.7; }
+
+  /* CALENDAR GRID */
+  .calendar-wrap {
+    padding: 8px 12px 100px;
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+
+  .day-cell {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.1s, background 0.2s, box-shadow 0.2s;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    gap: 2px;
+    padding: 4px 2px;
+    min-height: 46px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  .day-cell:active { transform: scale(0.93); }
+
+  .day-cell.empty {
+    cursor: default;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+  .day-cell.empty:active { transform: none; }
+
+  .day-num {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .day-cell.today .day-num {
+    background: var(--today);
+    color: white;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .day-cell.weekend .day-num { color: var(--text2); }
+
+  .day-badge {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 1px 4px;
+    border-radius: 4px;
+    line-height: 1.4;
+    font-family: 'DM Mono', monospace;
+    white-space: nowrap;
+  }
+
+  /* Color states */
+  .day-cell[data-type="NT"] { background: var(--NT-bg); border-color: var(--NT); box-shadow: 0 2px 6px rgba(42,110,90,0.2); }
+  .day-cell[data-type="NT"] .day-badge { background: var(--NT); color: white; }
+
+  .day-cell[data-type="NV"] { background: var(--NV-bg); border-color: var(--NV); box-shadow: 0 2px 6px rgba(26,77,140,0.2); }
+  .day-cell[data-type="NV"] .day-badge { background: var(--NV); color: white; }
+
+  .day-cell[data-type="ST"] { background: var(--ST-bg); border-color: var(--ST); box-shadow: 0 2px 6px rgba(140,58,26,0.2); }
+  .day-cell[data-type="ST"] .day-badge { background: var(--ST); color: white; }
+
+  .day-cell[data-type="VS"] { background: var(--VS-bg); border-color: var(--VS); box-shadow: 0 2px 6px rgba(107,45,140,0.2); }
+  .day-cell[data-type="VS"] .day-badge { background: var(--VS); color: white; }
+
+  .day-cell[data-type="REPOS"] { background: var(--REPOS-bg); border-color: var(--REPOS); box-shadow: 0 2px 6px rgba(90,85,80,0.15); }
+  .day-cell[data-type="REPOS"] .day-badge { background: var(--REPOS); color: white; }
+
+  /* BOTTOM SHEET */
+  .overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+
+  .overlay.show { opacity: 1; pointer-events: auto; }
+
+  .sheet {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--surface);
+    border-radius: 20px 20px 0 0;
+    padding: 0 0 calc(var(--safe-bottom) + 16px);
+    z-index: 300;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.32,0.72,0,1);
+    box-shadow: 0 -8px 40px rgba(0,0,0,0.12);
+  }
+
+  .sheet.show { transform: translateY(0); }
+
+  .sheet-handle {
+    width: 36px; height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    margin: 12px auto 8px;
+  }
+
+  .sheet-title {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text2);
+    padding: 0 20px 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .sheet-date {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    display: block;
+    margin-top: 2px;
+    text-transform: capitalize;
+  }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 16px 12px;
+  }
+
+  .opt-btn {
+    border: none;
+    border-radius: var(--radius);
+    padding: 16px 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    transition: transform 0.1s, opacity 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .opt-btn:active { transform: scale(0.96); opacity: 0.85; }
+
+  .opt-btn .opt-code {
+    font-family: 'DM Mono', monospace;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .opt-btn .opt-label {
+    font-size: 11px;
+    font-weight: 400;
+    opacity: 0.75;
+    line-height: 1.2;
+  }
+
+  .opt-btn.NT { background: var(--NT-bg); color: var(--NT); }
+  .opt-btn.NV { background: var(--NV-bg); color: var(--NV); }
+  .opt-btn.ST { background: var(--ST-bg); color: var(--ST); }
+  .opt-btn.VS { background: var(--VS-bg); color: var(--VS); }
+
+  .opt-btn.REPOS {
+    grid-column: 1/-1;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background: var(--REPOS-bg);
+    color: var(--REPOS);
+    padding: 14px 16px;
+  }
+
+  .opt-btn.REPOS .opt-code { font-size: 18px; }
+
+  .clear-btn {
+    display: block;
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    padding: 14px;
+    background: transparent;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text2);
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.15s, transform 0.1s;
+  }
+
+  .clear-btn:active { background: var(--surface2); transform: scale(0.98); }
+
+  /* LEGEND */
+  .legend {
+    position: fixed;
+    bottom: calc(var(--safe-bottom) + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 8px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    z-index: 50;
+    white-space: nowrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text2);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .legend-dot {
+    width: 8px; height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* MONTH SUMMARY */
+  .month-stats {
+    display: flex;
+    gap: 6px;
+    padding: 0 12px 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .month-stats::-webkit-scrollbar { display: none; }
+
+  .stat-chip {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'DM Mono', monospace;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .stat-chip span { font-size: 13px; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <button class="nav-btn" onclick="changeMonth(-1)">‹</button>
+    <div class="month-title">
+      <div class="month-name" id="monthName"></div>
+      <div class="year-label" id="yearLabel"></div>
+    </div>
+    <button class="nav-btn" onclick="changeMonth(1)">›</button>
+  </div>
+</div>
+
+<div class="weekdays">
+  <div class="weekday">Lun</div>
+  <div class="weekday">Mar</div>
+  <div class="weekday">Mer</div>
+  <div class="weekday">Jeu</div>
+  <div class="weekday">Ven</div>
+  <div class="weekday weekend">Sam</div>
+  <div class="weekday weekend">Dim</div>
+</div>
+
+<div class="calendar-wrap">
+  <div class="month-stats" id="monthStats"></div>
+  <div class="calendar-grid" id="calendarGrid"></div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--NT)"></div>NT</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--NV)"></div>NV</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--ST)"></div>ST</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--VS)"></div>VS</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--REPOS)"></div>REPOS</div>
+</div>
+
+<!-- Bottom Sheet -->
+<div class="overlay" id="overlay" onclick="closeSheet()"></div>
+<div class="sheet" id="sheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-title">Choisir le type de journée<span class="sheet-date" id="sheetDate"></span></div>
+  <div class="options-grid">
+    <button class="opt-btn NT" onclick="assignType('NT')">
+      <span class="opt-code">NT</span>
+      <span class="opt-label">Normal Terrain</span>
+    </button>
+    <button class="opt-btn NV" onclick="assignType('NV')">
+      <span class="opt-code">NV</span>
+      <span class="opt-label">Normal Visite</span>
+    </button>
+    <button class="opt-btn ST" onclick="assignType('ST')">
+      <span class="opt-code">ST</span>
+      <span class="opt-label">Suivi Terrain</span>
+    </button>
+    <button class="opt-btn VS" onclick="assignType('VS')">
+      <span class="opt-code">VS</span>
+      <span class="opt-label">Visite Spéciale</span>
+    </button>
+    <button class="opt-btn REPOS" onclick="assignType('REPOS')">
+      <span class="opt-code">REPOS</span>
+      <span class="opt-label">Jour de repos</span>
+    </button>
+  </div>
+  <button class="clear-btn" onclick="clearDay()">Effacer cette journée</button>
+</div>
+
+<script>
+  const MONTHS_FR = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+  const DAYS_SHORT = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
+  const TYPES = ['NT','NV','ST','VS','REPOS'];
+  const LABELS = { NT:'Normal Terrain', NV:'Normal Visite', ST:'Suivi Terrain', VS:'Visite Spéciale', REPOS:'Repos' };
+
+  let currentDate = new Date();
+  let viewYear = currentDate.getFullYear();
+  let viewMonth = currentDate.getMonth();
+  let selectedKey = null;
+  let planning = {};
+
+  // Load from localStorage
+  function load() {
+    const saved = localStorage.getItem('planning-travail-v2');
+    if (saved) planning = JSON.parse(saved);
+  }
+
+  function save() {
+    localStorage.setItem('planning-travail-v2', JSON.stringify(planning));
+  }
+
+  function dayKey(y, m, d) {
+    return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+  }
+
+  function changeMonth(dir) {
+    viewMonth += dir;
+    if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+    if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+    render();
+  }
+
+  function render() {
+    document.getElementById('monthName').textContent = MONTHS_FR[viewMonth];
+    document.getElementById('yearLabel').textContent = viewYear;
+
+    const grid = document.getElementById('calendarGrid');
+    grid.innerHTML = '';
+
+    const firstDay = new Date(viewYear, viewMonth, 1);
+    // Monday=0
+    let startOffset = (firstDay.getDay() + 6) % 7;
+    const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+    const todayStr = dayKey(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
+
+    // Empty cells
+    for (let i = 0; i < startOffset; i++) {
+      const empty = document.createElement('div');
+      empty.className = 'day-cell empty';
+      grid.appendChild(empty);
+    }
+
+    for (let d = 1; d <= daysInMonth; d++) {
+      const key = dayKey(viewYear, viewMonth, d);
+      const type = planning[key];
+      const dayOfWeek = (startOffset + d - 1) % 7; // 0=Mon, 5=Sat, 6=Sun
+      const isWeekend = dayOfWeek >= 5;
+      const isToday = key === todayStr;
+
+      const cell = document.createElement('div');
+      cell.className = 'day-cell' + (isWeekend ? ' weekend' : '') + (isToday ? ' today' : '');
+      if (type) cell.setAttribute('data-type', type);
+
+      const numEl = document.createElement('div');
+      numEl.className = 'day-num';
+      numEl.textContent = d;
+      cell.appendChild(numEl);
+
+      if (type) {
+        const badge = document.createElement('div');
+        badge.className = 'day-badge';
+        badge.textContent = type;
+        cell.appendChild(badge);
+      }
+
+      cell.addEventListener('click', () => openSheet(key, d));
+      grid.appendChild(cell);
+    }
+
+    renderStats();
+  }
+
+  function renderStats() {
+    const stats = {};
+    TYPES.forEach(t => stats[t] = 0);
+
+    const prefix = `${viewYear}-${String(viewMonth+1).padStart(2,'0')}-`;
+    Object.entries(planning).forEach(([k, v]) => {
+      if (k.startsWith(prefix)) stats[v] = (stats[v] || 0) + 1;
+    });
+
+    const colors = { NT:'var(--NT)', NV:'var(--NV)', ST:'var(--ST)', VS:'var(--VS)', REPOS:'var(--REPOS)' };
+    const bgs = { NT:'var(--NT-bg)', NV:'var(--NV-bg)', ST:'var(--ST-bg)', VS:'var(--VS-bg)', REPOS:'var(--REPOS-bg)' };
+
+    const container = document.getElementById('monthStats');
+    container.innerHTML = '';
+
+    let total = 0;
+    TYPES.forEach(t => { if (stats[t] > 0) total++; });
+
+    if (total === 0) {
+      container.innerHTML = `<div class="stat-chip" style="background:var(--surface2);color:var(--text3)">Aucune journée planifiée</div>`;
+      return;
+    }
+
+    TYPES.forEach(t => {
+      if (stats[t] > 0) {
+        const chip = document.createElement('div');
+        chip.className = 'stat-chip';
+        chip.style.background = bgs[t];
+        chip.style.color = colors[t];
+        chip.innerHTML = `${t} <span>${stats[t]}j</span>`;
+        container.appendChild(chip);
+      }
+    });
+  }
+
+  function openSheet(key, day) {
+    selectedKey = key;
+    const date = new Date(viewYear, viewMonth, day);
+    const dayNames = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+    document.getElementById('sheetDate').textContent = `${dayNames[date.getDay()]} ${day} ${MONTHS_FR[viewMonth]}`;
+    document.getElementById('overlay').classList.add('show');
+    document.getElementById('sheet').classList.add('show');
+  }
+
+  function closeSheet() {
+    document.getElementById('overlay').classList.remove('show');
+    document.getElementById('sheet').classList.remove('show');
+    selectedKey = null;
+  }
+
+  function assignType(type) {
+    if (!selectedKey) return;
+    planning[selectedKey] = type;
+    save();
+    closeSheet();
+    render();
+  }
+
+  function clearDay() {
+    if (!selectedKey) return;
+    delete planning[selectedKey];
+    save();
+    closeSheet();
+    render();
+  }
+
+  load();
+  render();
+</script>
+</body>
+</html>
