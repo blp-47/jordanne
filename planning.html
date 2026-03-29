@@ -30,6 +30,8 @@
     --ST-bg: #F8E8E0;
     --VS: #6B2D8C;
     --VS-bg: #F0E4F8;
+    --SG: #B8860B;
+    --SG-bg: #FDF5E0;
     --REPOS: #5A5550;
     --REPOS-bg: #EDEAE6;
 
@@ -204,6 +206,9 @@
   .day-cell[data-type="VS"] { background: var(--VS-bg); border-color: var(--VS); box-shadow: 0 2px 6px rgba(107,45,140,0.2); }
   .day-cell[data-type="VS"] .day-badge { background: var(--VS); color: white; }
 
+  .day-cell[data-type="SG"] { background: var(--SG-bg); border-color: var(--SG); box-shadow: 0 2px 6px rgba(184,134,11,0.2); }
+  .day-cell[data-type="SG"] .day-badge { background: var(--SG); color: white; }
+
   .day-cell[data-type="REPOS"] { background: var(--REPOS-bg); border-color: var(--REPOS); box-shadow: 0 2px 6px rgba(90,85,80,0.15); }
   .day-cell[data-type="REPOS"] .day-badge { background: var(--REPOS); color: white; }
 
@@ -301,6 +306,7 @@
   .opt-btn.NV { background: var(--NV-bg); color: var(--NV); }
   .opt-btn.ST { background: var(--ST-bg); color: var(--ST); }
   .opt-btn.VS { background: var(--VS-bg); color: var(--VS); }
+  .opt-btn.SG { background: var(--SG-bg); color: var(--SG); }
 
   .opt-btn.REPOS {
     grid-column: 1/-1;
@@ -426,6 +432,7 @@
   <div class="legend-item"><div class="legend-dot" style="background:var(--NV)"></div>NV</div>
   <div class="legend-item"><div class="legend-dot" style="background:var(--ST)"></div>ST</div>
   <div class="legend-item"><div class="legend-dot" style="background:var(--VS)"></div>VS</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--SG)"></div>SG</div>
   <div class="legend-item"><div class="legend-dot" style="background:var(--REPOS)"></div>REPOS</div>
 </div>
 
@@ -451,6 +458,10 @@
       <span class="opt-code">VS</span>
       <span class="opt-label">Visite Spéciale</span>
     </button>
+    <button class="opt-btn SG" onclick="assignType('SG')">
+      <span class="opt-code">SG</span>
+      <span class="opt-label">Saint-Gein</span>
+    </button>
     <button class="opt-btn REPOS" onclick="assignType('REPOS')">
       <span class="opt-code">REPOS</span>
       <span class="opt-label">Jour de repos</span>
@@ -462,8 +473,8 @@
 <script>
   const MONTHS_FR = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
   const DAYS_SHORT = ['Lun','Mar','Mer','Jeu','Ven','Sam','Dim'];
-  const TYPES = ['NT','NV','ST','VS','REPOS'];
-  const LABELS = { NT:'Normal Terrain', NV:'Normal Visite', ST:'Suivi Terrain', VS:'Visite Spéciale', REPOS:'Repos' };
+  const TYPES = ['NT','NV','ST','VS','SG','REPOS'];
+  const LABELS = { NT:'Normal Terrain', NV:'Normal Visite', ST:'Suivi Terrain', VS:'Visite Spéciale', SG:'Saint-Gein', REPOS:'Repos' };
 
   let currentDate = new Date();
   let viewYear = currentDate.getFullYear();
@@ -552,8 +563,8 @@
       if (k.startsWith(prefix)) stats[v] = (stats[v] || 0) + 1;
     });
 
-    const colors = { NT:'var(--NT)', NV:'var(--NV)', ST:'var(--ST)', VS:'var(--VS)', REPOS:'var(--REPOS)' };
-    const bgs = { NT:'var(--NT-bg)', NV:'var(--NV-bg)', ST:'var(--ST-bg)', VS:'var(--VS-bg)', REPOS:'var(--REPOS-bg)' };
+    const colors = { NT:'var(--NT)', NV:'var(--NV)', ST:'var(--ST)', VS:'var(--VS)', SG:'var(--SG)', REPOS:'var(--REPOS)' };
+    const bgs = { NT:'var(--NT-bg)', NV:'var(--NV-bg)', ST:'var(--ST-bg)', VS:'var(--VS-bg)', SG:'var(--SG-bg)', REPOS:'var(--REPOS-bg)' };
 
     const container = document.getElementById('monthStats');
     container.innerHTML = '';
